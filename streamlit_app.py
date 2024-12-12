@@ -1,5 +1,7 @@
 import streamlit as st
 from datetime import datetime
+from gtts import gTTS
+import os
 import time
 
 # Set the title of the app
@@ -27,7 +29,17 @@ minutes_remaining = (time_remaining.seconds // 60) % 60
 seconds_remaining = time_remaining.seconds % 60
 
 # Display the countdown
-st.subheader(f"🎅 Only {days_remaining} days, {hours_remaining} hours, {minutes_remaining} minutes, and {seconds_remaining} seconds left until Christmas!")
+countdown_message = f"🎅 Only {days_remaining} days, {hours_remaining} hours, {minutes_remaining} minutes, and {seconds_remaining} seconds left until Christmas!"
+
+st.subheader(countdown_message)
+
+# Generate audio of the countdown message using Google Text-to-Speech (gTTS)
+tts = gTTS(countdown_message, lang='en')
+audio_file_path = "countdown.mp3"
+tts.save(audio_file_path)
+
+# Play the generated audio using Streamlit's audio player
+st.audio(audio_file_path)
 
 # Show a fun fact about Santa Claus
 st.markdown("""
@@ -51,3 +63,5 @@ if st.button("Get Christmas Cheer 🎅"):
 st.markdown("---")
 st.markdown("Created with ❤️ for the holiday season by [Your Name]")
 
+# Clean up the generated audio file after it's used
+os.remove(audio_file_path)
