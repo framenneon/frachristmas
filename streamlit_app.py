@@ -96,9 +96,9 @@ if st.button("Get Christmas Cheer 🎅"):
 # Display a footer message in the selected language
 st.markdown("---")
 if language == "English":
-    st.markdown("Created with ❤️ for the holiday season by [Your Name]")
+    st.markdown("Created with ❤️ for the holiday season by Francesco")
 elif language == "Italian":
-    st.markdown("Creato con ❤️ per la stagione delle festività da [Your Name]")
+    st.markdown("Creato con ❤️ per la stagione delle festività da Francesco")
 
 # Clean up the generated audio file after it's used
 os.remove(audio_file_path)
