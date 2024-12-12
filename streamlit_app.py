@@ -10,6 +10,9 @@ st.title("🎅 Santa Claus Christmas Countdown 🎄")
 # Display a festive greeting
 st.header("Welcome to the Christmas Wonderland with Santa Claus!")
 
+# Display a picture of Santa Claus
+st.image("https://play-lh.googleusercontent.com/U6hu7q67BaibfGfG2WtJxr0e8WC-xMBqbH_FTJpOR-sSaGGQiEVuKxvvRslmn9uozSU", width=400)
+
 # Language selection (English or Italian)
 language = st.selectbox("Choose your language", ["English", "Italian"])
 
