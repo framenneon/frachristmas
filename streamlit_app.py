@@ -9,7 +9,7 @@ st.title("🎅 Santa Claus Christmas Countdown 🎄")
 st.header("Welcome to the Christmas Wonderland with Santa Claus!")
 
 # Display a picture of Santa Claus
-st.image("https://upload.wikimedia.org/wikipedia/commons/5/5b/Santa_Claus_22.jpg", width=400)
+st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fsanta-claus&psig=AOvVaw36HqBXvxOsy4Jsrnw5p7K2&ust=1734080990647000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIDW5Z7xoYoDFQAAAAAdAAAAABAE", width=400)
 
 # Countdown to Christmas (December 25th)
 today = datetime.today()
